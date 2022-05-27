@@ -100,7 +100,7 @@ struct config_space_bitfield type_1_header[] = {
 /** Vendor IDs used in Adnacom's products */
 enum adnacom_device
 {
-    PLX_VENDOR_ID = 0xb510,
+    PLX_VENDOR_ID = 0x10b5,
     DEVICE_MAX
 };
 
