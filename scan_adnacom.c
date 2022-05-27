@@ -249,7 +249,6 @@ int main( void )
 {
     struct pci_access *pacc;
     struct pci_dev *dev;
-    unsigned int c;
     uint i = 0;
 
     pacc = pci_alloc();		/* Get the pci_access structure */
@@ -260,7 +259,6 @@ int main( void )
     for( dev=pacc->devices; dev; dev=dev->next )	/* Iterate over all devices */
     {
         pci_fill_info(dev, PCI_FILL_IDENT | PCI_FILL_BASES | PCI_FILL_CLASS);	/* Fill in header info we need */
-        c = pci_read_byte(dev, PCI_INTERRUPT_PIN);				/* Read config register directly */
         if( PLX_VENDOR_ID == (dev->vendor_id & 0xffff) )
         {
             /* If device exists, print header */
